@@ -1,6 +1,6 @@
 {
-    "name": "latihan_wisata_candi_abi",
-    "short_name": "latihan_wisata_candi_abi",
+    "name": "wisata_candi",
+    "short_name": "wisata_candi",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
