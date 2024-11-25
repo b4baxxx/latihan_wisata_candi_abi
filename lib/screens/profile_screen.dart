@@ -8,8 +8,22 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-
   bool isSignedIn = true;
+  String fullName = '';
+  string userName = '',
+  int favoriteCandiCount = 0;
+  late Color iconColor;
+
+  void SignIn() {
+    // setState(() {
+    // isSignedIn = true;
+    // userName = 'budi';
+    // fullName = 'budi sentoso';
+    // favoriteCandiCount = 3;
+    // });
+    Navigator.pushNamed(context, '/signIn');
+  }
+
 
   @override
   Widget build(BuildContext context) {
