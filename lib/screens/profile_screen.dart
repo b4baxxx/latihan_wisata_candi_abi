@@ -9,21 +9,20 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   bool isSignedIn = true;
-  String fullName = '';
-  string userName = '',
+  String fullName ='';
+  String userName ='';
   int favoriteCandiCount = 0;
   late Color iconColor;
 
-  void SignIn() {
+  void signIn() {
     // setState(() {
     // isSignedIn = true;
     // userName = 'budi';
-    // fullName = 'budi sentoso';
-    // favoriteCandiCount = 3;
+    // fullName = 'Budi Santoso';
+    //favoriteCandiCount = 3;
     // });
-    Navigator.pushNamed(context, '/signIn');
+    Navigator.pushNamed(context, '/signin');
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -42,32 +41,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Padding(
-                      padding: const EdgeInsets.only(top: 200-50),
-                      child: Stack(
-                        alignment: Alignment.bottomRight,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.deepPurple, width: 2),
-                              shape: BoxShape.circle,
-                            ),
-                            child: CircleAvatar(
-                              radius: 50,
-                              backgroundImage:
-                                  AssetImage('images/placeholder_image.png'),
-                            ),
+                    padding: const EdgeInsets.only(top: 200-50),
+                    child: Stack(
+                      alignment: Alignment.bottomRight,
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.deepPurple, width: 2),
+                            shape: BoxShape.circle,
                           ),
-                          if(isSignedIn)
-                            IconButton(
-                                onPressed: (){},
-                                icon: Icon(Icons.camera_alt, color: Colors.deepPurple[50],),
-                            ),
-                        ],
-                      ),
-                      //   TODO 3. Buaqt bagian ProfileInfo yang berisi info profile
-                      //   TODO 4. buat ProfileActions yang berisi TextButton sign in/out
+                          child: CircleAvatar(
+                            radius: 50,
+                            backgroundImage:
+                            AssetImage('images/placeholder_image.png'),
+                          ),
+                        ),
+                        if(isSignedIn)
+                          IconButton(
+                            onPressed: (){},
+                            icon: Icon(Icons.camera_alt, color: Colors.deepPurple[50],),
+                          ),
+                      ],
                     ),
+                    //   TODO 3. Buaqt bagian ProfileInfo yang berisi info profile
+                    //   TODO 4. buat ProfileActions yang berisi TextButton sign in/out
                   ),
+                ),
               ],
             ),
           ),
@@ -76,4 +75,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-

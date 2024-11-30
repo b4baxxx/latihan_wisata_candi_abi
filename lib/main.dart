@@ -37,14 +37,14 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: MainScreen(),
+      home: SignUpScreen(),
       initialRoute: '/',
       routes: {
         '/homescreen': (context) => const HomeScreen(),
-        '/signin': (context) => const SignInScreen(),
+        '/signin': (context) =>  const SignInScreen(),
         '/signup': (context) => const SignUpScreen(),
-      },
 
+      },
     );
   }
 }
